@@ -1119,7 +1119,7 @@
         "roomNameAllowedChars": "Toplantı adı şu karakterlerden hiçbirini içermemelidir: ?, &, :, ', \", %, #.",
         "go": "GİT",
         "goSmall": "GİT",
-        "headerTitle": "Jitsi Meet",
+        "headerTitle": "Nearhub Meet",
         "headerSubtitle": "Güvenli ve yüksek kaliteli toplantılar",
         "join": "KATIL",
         "jitsiOnMobile": "Mobil'de Jitsi – uygulamalarımızı indirin ve her yerden bir toplantı başlatın",
