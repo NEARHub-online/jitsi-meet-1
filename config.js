@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars, no-var */
 
+const { takeWhile } = require("lodash");
+
 var config = {
     // Connection
     //
@@ -248,18 +250,18 @@ var config = {
     // fileRecordingsServiceSharingEnabled: false,
 
     // Whether to enable live streaming or not.
-    // liveStreamingEnabled: false,
+    liveStreamingEnabled: true,
 
     // Transcription (in interface_config,
     // subtitles and buttons can be configured)
-    // transcribingEnabled: false,
+    transcribingEnabled: true,
 
     // If true transcriber will use the application language.
     // The application language is either explicitly set by participants in their settings or automatically
     // detected based on the environment, e.g. if the app is opened in a chrome instance which is using french as its
     // default language then transcriptions for that participant will be in french.
     // Defaults to true.
-    // transcribeWithAppLanguage: true,
+    transcribeWithAppLanguage: true,
 
     // Transcriber language. This settings will only work if "transcribeWithAppLanguage" is explicitly set to false.
     // Available languages can be found in
@@ -444,10 +446,10 @@ var config = {
     // autoKnockLobby: false,
 
     // Hides add breakout room button
-    // hideAddRoomButton: false,
+    hideAddRoomButton: false,
 
     // Require users to always specify a display name.
-    // requireDisplayName: true,
+    requireDisplayName: true,
 
     // Whether to use a welcome page or not. In case it's false a random room
     // will be joined when no room is specified.
@@ -462,7 +464,7 @@ var config = {
 
     // Enabling the close page will ignore the welcome page redirection when
     // a call is hangup.
-    // enableClosePage: false,
+    enableClosePage: true,
 
     // Disable hiding of remote thumbnails when in a 1-on-1 conference call.
     // Setting this to null, will also disable showing the remote videos
@@ -494,10 +496,10 @@ var config = {
 
     // Enables calendar integration, depends on googleApiApplicationClientID
     // and microsoftApiApplicationClientID
-    // enableCalendarIntegration: false,
+    enableCalendarIntegration: true,
 
     // When 'true', it shows an intermediate page before joining, where the user can configure their devices.
-    // prejoinPageEnabled: false,
+    prejoinPageEnabled: true,
 
     // When 'true', the user cannot edit the display name.
     // (Mainly useful when used in conjuction with the JWT so the JWT name becomes read only.)
@@ -524,7 +526,7 @@ var config = {
 
     // App name to be displayed in the invitation email subject, as an alternative to
     // interfaceConfig.APP_NAME.
-    // inviteAppName: null,
+    inviteAppName: talk.nearhub.online,
 
     // Moved from interfaceConfig(TOOLBAR_BUTTONS).
     // The name of the toolbar buttons to display in the toolbar, including the
