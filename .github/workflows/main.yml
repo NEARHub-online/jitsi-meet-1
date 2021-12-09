@@ -1,0 +1,23 @@
+   name: build app
+
+   on:
+     push:
+       branches: [ master ]
+
+   jobs:
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - name: checkout repo
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+          cache: 'npm'
+      - run: npm install
+      - name: build application
+        run: make build
+      - uses: actions/upload-artifact@v2
+        with:
+          name: "nearhub-jitsi-meet"
+          path: ./
