@@ -16,7 +16,7 @@
           cache: 'npm'
       - run: npm install
       - name: build application
-        run: make build
+        run: make
       - uses: actions/upload-artifact@v2
         with:
           name: "nearhub-jitsi-meet"
